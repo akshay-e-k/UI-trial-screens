@@ -1,0 +1,78 @@
+body {
+      background-color: #f1f1f1 !important;
+}
+/* toggle menu start */
+.icon { max-width: 1em }
+.menu {
+      width: 100%;
+      background-color: #fff;
+}
+.menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0.2em 0.5em;
+}
+.menu li { margin: 0 }
+.menu a, .menu a:visited {
+      color: #000000;
+      text-decoration: none;
+}
+.text {
+      display: inline;
+      margin: 0;
+      font-size: 12px;
+}
+/* toggle menu end */
+.content {
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+}
+.logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      padding: 0 9px 0 13px;
+}
+.toggle-btn {
+      height: 50px;
+      width: 40px;
+      border: none;
+      background-color: #fff;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+}
+.toggle-btn:focus {
+      outline: none;
+}
+.admin-block {
+      border-left: 1px solid #ccc;
+}
+.menu-toggle {
+      border-right: 1px solid rgb(204, 204, 204);
+      text-align: center;
+}
+.dashboard-card {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+.all-jobs-card {
+      background-image: url("https://dummyimage.com/220X120/00bfef/00bfef");
+}
+.total-candidates {
+      background-image: url("https://dummyimage.com/220X120/f39d12/f39d12");
+}
+.total-applications {
+      background-image: url("https://dummyimage.com/220X120/3379b7/3379b7");
+}
+.total-interviews {
+      background-image: url("https://dummyimage.com/220X120/d81b60/d81b60");
+}
+.total-hired {
+      background-image: url("https://dummyimage.com/220X120/00a65b/00a65b");
+}
+.total-rejected {
+      background-image: url("https://dummyimage.com/220X120/dd4c39/dd4c39");
+}
+.cards-footer {
+      background-color: rgba(0, 0, 0, 0.1);
+}
