@@ -15,11 +15,11 @@
   <body>
     <div class="container-fluid">
         <div class="content row p-0">
-            <div class="col-md-10 col-lg-10 col-8 p-0">
+            <div class="col-md-10 col-lg-10 col-xl-11 col-8 p-0">
                 <span class="logo-text">CF</span>
                 <button id="togglebutton" class="toggle-btn">&#9776;</button>
             </div>
-            <div class="col-md-2 col-lg-2 col-4 pt-3 admin-block">
+            <div class="col-md-2 col-lg-2 col-xl-1 col-4 pt-3 admin-block">
                 <span><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i>Admin</span>
             </div>
         </div>
@@ -109,7 +109,14 @@
                 </div>
             </div>
             <div class="col-md-10 col-lg-10 col-xl-11 col-sm-10 col-12">
-                <h5 class="my-2">Dashboard</h5>
+                <div class="row mt-2">
+                    <div class="col-md-10 col-lg-10 col-xl-11 col-8">
+                        <h5>Dashboard</h5>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-1 col-4 top-home-text">
+                        <i class="fa fa-tachometer" aria-hidden="true"></i> Home
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-xl-6 col-12">
                         <div class="row p-0">
@@ -147,8 +154,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <p>some text</p>
+                        <div class="col-12 p-0">
+                            <div class="popular-jobs-container">
+                                <div class="pop-jobs-block">
+                                    <div class="col-6 mt-1 text-muted">
+                                        <h5>Popular Jobs</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        
+                                    </div>
+                                </div>
+                                <div id="popularJobsCont" style="min-width: 100%; height: 300px; margin: 0 auto;"></div>
+                                <span id="displayStats" class="stats"></span>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-12 col-xl-6 col-12">
@@ -199,5 +217,107 @@
     <script src="./js/dashboard-custom.js"></script>
     <script src="./js/popper-min.js"></script>
     <script src="./js/bootstrap-min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // Create the chart
+            addLabel = function(point) {
+                $('.cLabel').remove();
+                var text = point.name+"<br/><br/>"+point.y,
+                chart = point.series.chart,
+                renderer = chart.renderer;
+                chart.renderer.label(text, chart.chartWidth / 2, chart.chartHeight / 2.3).attr({
+                'text-anchor': 'middle',
+                }).addClass('cLabel').add();
+                $('.cLabel').css({fontSize: "15px", fontWeight: 900});
+            };
+            chart = new Highcharts.Chart({
+                chart: {
+                renderTo: 'popularJobsCont',
+                type: 'pie',
+                events: {
+                    redraw: function() {
+                    var chart = this;
+                    $('.cLabel').attr({
+                        transform: 'translate(' + chart.chartWidth / 2 + ',' + chart.chartHeight / 2 + ')'
+                    })
+                    }
+                }
+                },
+                title: {
+                text: ''
+                },
+                legend: {
+                    align: 'right',
+                    verticalAlign: 'top',
+                    x: -40,
+                    y: -10,
+                    floating: true,
+                    itemDistance: 10,
+                    itemStyle: {
+                        color: '#000',
+                        fontWeight: 'bold'
+                    },
+                    title: {
+                        text: "<h5>Populat Jobs</h5>",
+                        
+                    },
+                    useHTML: true
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        shadow: false,
+                        borderColor: "#000000",
+                        borderWidth: 0.6,
+                        point: {
+                            enabled: false
+                        }
+                    },
+                    series: {
+                        point: {
+                        events: {
+                            click: function() {
+                            addLabel(this)
+                            }
+                        }
+                        }
+                    },
+                    showCheckbox: true
+                },
+                tooltip: {
+                formatter: function() {
+                    return '<b>' + this.point.name + '</b>';
+                }
+                },
+                series: [{
+                data: [{
+                    name: 'ReactJS Developer',
+                    y: 4,
+                    subtotal: 7899.99,
+                    color: "#3c8dbc"
+                }, {
+                    name: 'JavaScript Developer',
+                    y: 8,
+                    subtotal: 5799.99,
+                    color: "#39cccc"
+                }, {
+                    name: 'NodeJS Developer',
+                    y: 14,
+                    subtotal: 2399.99,
+                    color: "#00a65a"
+                }],
+                size: '100%',
+                innerSize: '75%',
+                showInLegend: true,
+                dataLabels: {
+                    enabled: false
+                }
+                }]
+            });
+            });
+    </script>
   </body>
 </html>

@@ -21,6 +21,7 @@ body {
       display: inline;
       margin: 0;
       font-size: 12px;
+      font-weight: 700;
 }
 /* toggle menu end */
 .content {
@@ -75,4 +76,15 @@ body {
 }
 .cards-footer {
       background-color: rgba(0, 0, 0, 0.1);
+}
+.top-home-text {
+      font-size: 12px;
+      text-align: right;
+}
+.popular-jobs-container {
+      border-top: 2px solid red;
+      background-color: #fff;
+}
+.pop-jobs-block {
+      border-bottom: 1px solid #ccc;
 }
