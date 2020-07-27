@@ -83,8 +83,69 @@ body {
 }
 .popular-jobs-container {
       border-top: 2px solid red;
-      background-color: #fff;
 }
 .pop-jobs-block {
       border-bottom: 1px solid #ccc;
+}
+.pj-chkbox-block .checkmark:after {
+      left: 4px;
+      top: 0;
+      width: 8px;
+      height: 12px;
+      border: solid rgba(14, 118, 168, 1);
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+.checkmark {
+      position: absolute;
+      top: 10px;
+      left: 2px;
+      height: 16px;
+      width: 18px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+}
+.pj-chkbox-block input:checked ~ .checkmark {
+      background-color: #fff;
+}
+.pj-chkbox-block input {
+      opacity: 0;
+      cursor: pointer;
+}
+.checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+}
+.pj-chkbox-block input:checked ~ .checkmark:after {
+      display: block;
+}
+.pj-chkbox-block {
+      position: relative;
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+}
+.pj-chkbox-label {
+      font-weight: 700;
+      font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+      .align-right {
+            text-align: right;
+      }
+}
+.top-candi-container {
+      border-top: 2px solid green;
+}
+.white-radius {
+      background-color: #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
 }

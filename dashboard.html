@@ -154,14 +154,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 p-0">
-                            <div class="popular-jobs-container">
-                                <div class="pop-jobs-block">
-                                    <div class="col-6 mt-1 text-muted">
-                                        <h5>Popular Jobs</h5>
+                        <div class="col-12 p-0 mb-3">
+                            <div class="popular-jobs-container white-radius">
+                                <div class="pop-jobs-block row mx-0">
+                                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 mt-1 text-muted">
+                                        <h6 class="mt-1">Popular Jobs</h6>
                                     </div>
-                                    <div class="col-6">
-                                        
+                                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 align-right">
+                                        <label for="applied" class="pj-chkbox-block">
+                                            <input type="checkbox" id="applied" checked />
+                                            <span class="checkmark"></span>
+                                        </label><span class="pj-chkbox-label">Applied</span>
+                                        <label for="favorited" class="pj-chkbox-block">
+                                            <input type="checkbox" id="favorited" checked />
+                                            <span class="checkmark"></span>
+                                        </label><span class="pj-chkbox-label">Favorited</span>
+                                        <label for="referred" class="pj-chkbox-block">
+                                            <input type="checkbox" id="referred" checked />
+                                            <span class="checkmark"></span>
+                                        </label><span class="pj-chkbox-label">Referred</span>
                                     </div>
                                 </div>
                                 <div id="popularJobsCont" style="min-width: 100%; height: 300px; margin: 0 auto;"></div>
@@ -205,8 +216,35 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <p>some text</p>
+                        <div class="col-12 p-0 mb-3">
+                            <div class="top-candi-container white-radius">
+                                <div class="pop-jobs-block row mx-0">
+                                    <div class="col-12 col-xl-4 col-lg-6 col-md-6 mt-1 text-muted">
+                                        <h6 class="mt-1">Top Candidates</h6>
+                                    </div>
+                                    <div class="col-12 col-xl-8 col-lg-6 col-md-6 align-right">
+                                        <label for="traits" class="pj-chkbox-block">
+                                            <input type="checkbox" id="traits" checked />
+                                            <span class="checkmark"></span>
+                                        </label><span class="pj-chkbox-label">Traits</span>
+                                        <label for="interviews" class="pj-chkbox-block">
+                                            <input type="checkbox" id="interviews" checked />
+                                            <span class="checkmark"></span>
+                                        </label><span class="pj-chkbox-label">Interviews</span>
+                                        <label for="quizes" class="pj-chkbox-block">
+                                            <input type="checkbox" id="quizes" checked />
+                                            <span class="checkmark"></span>
+                                        </label><span class="pj-chkbox-label">Quizes</span>
+                                        <select>
+                                            <option>All Jobs</option>
+                                            <option>Government</option>
+                                            <option>Private</option>
+                                            <option>Semi-govt</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="topCandidatesCont" style="min-width: 100%; height: 300px; margin: 0 auto;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -219,105 +257,7 @@
     <script src="./js/bootstrap-min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            // Create the chart
-            addLabel = function(point) {
-                $('.cLabel').remove();
-                var text = point.name+"<br/><br/>"+point.y,
-                chart = point.series.chart,
-                renderer = chart.renderer;
-                chart.renderer.label(text, chart.chartWidth / 2, chart.chartHeight / 2.3).attr({
-                'text-anchor': 'middle',
-                }).addClass('cLabel').add();
-                $('.cLabel').css({fontSize: "15px", fontWeight: 900});
-            };
-            chart = new Highcharts.Chart({
-                chart: {
-                renderTo: 'popularJobsCont',
-                type: 'pie',
-                events: {
-                    redraw: function() {
-                    var chart = this;
-                    $('.cLabel').attr({
-                        transform: 'translate(' + chart.chartWidth / 2 + ',' + chart.chartHeight / 2 + ')'
-                    })
-                    }
-                }
-                },
-                title: {
-                text: ''
-                },
-                legend: {
-                    align: 'right',
-                    verticalAlign: 'top',
-                    x: -40,
-                    y: -10,
-                    floating: true,
-                    itemDistance: 10,
-                    itemStyle: {
-                        color: '#000',
-                        fontWeight: 'bold'
-                    },
-                    title: {
-                        text: "<h5>Populat Jobs</h5>",
-                        
-                    },
-                    useHTML: true
-                },
-                plotOptions: {
-                    pie: {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        shadow: false,
-                        borderColor: "#000000",
-                        borderWidth: 0.6,
-                        point: {
-                            enabled: false
-                        }
-                    },
-                    series: {
-                        point: {
-                        events: {
-                            click: function() {
-                            addLabel(this)
-                            }
-                        }
-                        }
-                    },
-                    showCheckbox: true
-                },
-                tooltip: {
-                formatter: function() {
-                    return '<b>' + this.point.name + '</b>';
-                }
-                },
-                series: [{
-                data: [{
-                    name: 'ReactJS Developer',
-                    y: 4,
-                    subtotal: 7899.99,
-                    color: "#3c8dbc"
-                }, {
-                    name: 'JavaScript Developer',
-                    y: 8,
-                    subtotal: 5799.99,
-                    color: "#39cccc"
-                }, {
-                    name: 'NodeJS Developer',
-                    y: 14,
-                    subtotal: 2399.99,
-                    color: "#00a65a"
-                }],
-                size: '100%',
-                innerSize: '75%',
-                showInLegend: true,
-                dataLabels: {
-                    enabled: false
-                }
-                }]
-            });
-            });
-    </script>
+    <script src="./js/pie-chart.js"></script>
+    <script src="./js/bar-chart.js"></script>
   </body>
 </html>
