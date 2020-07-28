@@ -84,7 +84,7 @@ body {
 .popular-jobs-container {
       border-top: 2px solid red;
 }
-.pop-jobs-block {
+.major-cards-border {
       border-bottom: 1px solid #ccc;
 }
 .pj-chkbox-block .checkmark:after {
@@ -141,6 +141,12 @@ body {
             text-align: right;
       }
 }
+@media only screen and (max-width: 576px) {
+      .table td, .table th {
+            font-size: 12px;
+            padding: 2%;
+      }
+}
 .top-candi-container {
       border-top: 2px solid green;
 }
@@ -148,4 +154,45 @@ body {
       background-color: #fff;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
+}
+.job-statuses-container {
+      border-top: 2px solid #00c0ef;
+}
+
+.k-floatwrap {
+      position: absolute !important;
+      top: -33px !important;
+      right: 20px !important;
+      height: 30px !important;
+      background-color: #fff !important;
+      padding: 0 !important;
+      border: none !important;
+}
+.k-pager-first, .k-pager-input, .k-pager-last {
+      display: none !important;
+}
+.k-pager-wrap .k-link {
+      background-color: rgba(0, 154, 255, 1) !important;
+      height: 20px;
+}
+.k-link .k-pager-nav {
+      position: absolute;
+      right: 0;
+}
+.k-pager-info {
+      background-color: rgba(90, 190, 255, 1);
+      margin: 0 20px 0 0;
+      color: #fff;
+      display: block !important;
+}
+.k-header {
+      font-weight: 800 !important;
+}
+.k-i-arrow-60-left:before {
+      content: "<" !important;
+      color: #fff !important;
+}
+.k-i-arrow-60-right:before {
+      content: ">" !important;
+      color: #fff !important;
 }

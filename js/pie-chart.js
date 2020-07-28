@@ -67,7 +67,7 @@ $(document).ready(function() {
             series: [{
             data: [{
                 name: 'ReactJS Developer',
-                y: 8,
+                y: 15,
                 color: "#3c8dbc"
             }, {
                 name: 'JavaScript Developer',
