@@ -34,7 +34,7 @@ $(document).ready(function() {
             },
             pageSize: 5
         },
-        height: 320,
+        height: 200,
         scrollable: true,
         sortable: false,
         filterable: false,
@@ -47,13 +47,13 @@ $(document).ready(function() {
             }
         },
         columns: [
-            { field: "Job", title: "Job", width: "130px", template: function(dataItem) {
+            { field: "Job", title: "Job", width: "100px", template: function(dataItem) {
                 return "<a href='#' style='color:rgba(60, 172, 223, 1)'>" + kendo.htmlEncode(dataItem.Job) 
                 + "<i class='fa fa-share-square-o ml-1' aria-hidden='true'></i></a>";
             }},
-            { field: "Department", title: "Department", width: "130px" },
-            { field: "Candidates", title: "Candidates", width: "130px" },
-            { field: "Status", width: "130px", template: function(dataItem) {
+            { field: "Department", title: "Department", width: "100px" },
+            { field: "Candidates", title: "Candidates", width: "100px" },
+            { field: "Status", width: "100px", template: function(dataItem) {
                 return "<span class='badge badge-primary mr-1 px-2'>" + kendo.htmlEncode(dataItem.Status) + "</span>" +
                 "<span class='badge badge-warning mr-1 px-2'>" + kendo.htmlEncode(dataItem.Status) + "</span>" +
                 "<span class='badge badge-success mr-1 px-2'>" + kendo.htmlEncode(dataItem.Status) + "</span>" +

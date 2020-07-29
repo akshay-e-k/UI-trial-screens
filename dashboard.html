@@ -188,7 +188,7 @@
                                     </div>
                                 </div>
                                 <div class="row mx-0">
-                                    <div id="jobstatusesTable"></div>
+                                    <div id="jobstatusesTable" class="px-2"></div>
                                 </div>
                             </div>
                         </div>
@@ -259,6 +259,24 @@
                                 <div id="topCandidatesCont" style="min-width: 100%; height: 300px; margin: 0 auto;"></div>
                             </div>
                         </div>
+                        <div class="col-12 p-0 mb-3">
+                            <div class="todo-container white-radius">
+                                <div class="row mx-0">
+                                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 mt-1 text-muted">
+                                        <h6 class="mt-1">To Do List</h6>
+                                    </div>
+                                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 mt-1">
+                                        <input type="text" class="addtodo-input" placeholder="Enter the todo" autofocus />
+                                        <button id="addTodo" class="addTodoBtn">
+                                            <span>+</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row mx-0">
+                                    <div id="todoListTable" class="px-2 todo-table"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -272,8 +290,8 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="./js/pie-chart.js"></script>
     <script src="./js/bar-chart.js"></script>
-    <!-- <script src="https://kendo.cdn.telerik.com/2020.2.617/js/jquery.min.js"></script> -->
     <script src="https://kendo.cdn.telerik.com/2020.2.617/js/kendo.all.min.js"></script>
     <script src="./js/job-statuses-table.js"></script>
+    <script src="./js/todo-list-table.js"></script>
   </body>
 </html>
