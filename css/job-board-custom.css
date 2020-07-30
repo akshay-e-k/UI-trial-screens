@@ -1,0 +1,20 @@
+.pro-view-block {
+    background-color: #fff;
+}
+.proview-unverified {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: orange;
+    background-color: #fff;
+}
+.proview-image-block {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background-color: lightblue;
+    color: #fff;
+    border-radius: 70px;
+    width: 100px;
+    height: 100px;
+}
