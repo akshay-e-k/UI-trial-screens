@@ -19,4 +19,14 @@ $(document).ready(function(){
         $(".menu .text").css({display: initialDisplay});
       }
   });
+
+  $(".pro-tabs .active").parent("li").css({"border-bottom": "3px solid orange"});
+  $(".pro-tabs .active").css({"color": "orange"});
+
+  $(".pro-tabs li").click(function() {
+    $(".pro-tabs a").css({"color": "#000"});
+    $(".pro-tabs li").css({"border-bottom": "none"});
+    $(this).children().css({"color": "orange"});
+    $(this).css({"border-bottom": "3px solid orange"});
+  });
 });

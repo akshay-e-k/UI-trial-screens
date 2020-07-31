@@ -125,7 +125,7 @@
                             <h6 class="mb-0 mt-2">Employees <i class="fa fa-angle-right mx-2" aria-hidden="true"></i> Profile View</h6>
                         </div>
                         <div class="col-md-7 col-lg-6 col-xl-6 col-8 pr-0 text-right">
-                            <button class="btn btn-outline-secondary"><i class="fa fa-pencil-square-o mr-1" aria-hidden="true"></i>Edit Profile</button>
+                            <button class="btn btn-outline-secondary mr-2"><i class="fa fa-pencil-square-o mr-1" aria-hidden="true"></i>Edit Profile</button>
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-bolt mr-1" aria-hidden="true"></i>Quick Actions
                             </button>
@@ -137,23 +137,121 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-4 pl-0">
+                        <div class="col-xl-4 col-lg-4 pl-0">
                             <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/200X60/8c7878/8c7878" alt="Card image">
-                                <span class="text-uppercase proview-unverified">Unverified</span>
-                                <div class="proview-image-block p-4 text-center">
-                                    <h1>C</h1>
+                                    <img class="card-img-top" src="https://dummyimage.com/200X60/8c7878/8c7878" alt="Card image" />
+                                    <span class="text-uppercase proview-unverified px-3">Unverified</span>
+                                    <div class="proview-image-block p-4 text-center">
+                                        <h1>C</h1>
+                                    </div>
+                                <div class="card-body pt-0">
+                                    <h5 class="card-title mb-0">Sulaiman</h5>
+                                    <p class="card-text">E003</p>
+                                    <p><i class="fa fa-users mr-3" aria-hidden="true"></i><a href="#">Field Sales</a></p>
+                                    <p><i class="fa fa-map-marker mr-4" aria-hidden="true"></i>Mundamveli, India.</p>
                                 </div>
-                                <div class="card-body mt-4">
-                                    <h4 class="card-title">John Doe</h4>
-                                    <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                                    <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                            <div class="col-12 mt-4 pro-contact-card p-0 mb-4">
+                                <div class="p-4 pt-4 pb-2">
+                                    <h6 class="mb-5">Contact</h6>
+                                    <p>
+                                        <i class="fa fa-phone mr-4" aria-hidden="true"></i>
+                                        <span class="mr-5">Work</span>
+                                        <a href="tel:(416)022-3562" class="ml-2 text-muted">(416)022-3562</a>
+                                    </p>
+                                    <p class="mb-4">
+                                        <i class="fa fa-phone mr-4 invisible" aria-hidden="true"></i>
+                                        <span class="mr-5">Others</span>
+                                        <a href="tel:(416)099-8899" class="text-muted">(416)099-8899</a>
+                                    </p>
+                                    <p>
+                                        <i class="fa fa-phone mr-4" aria-hidden="true"></i>
+                                        <span class="mr-5">Mobile</span>
+                                        <span>-</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-8 pr-0">
-
+                        <div class="col-xl-8 col-lg-8">
+                            <ul class="nav nav-tabs pro-tabs">
+                                <li class="pb-2"><a class="active mx-2" data-toggle="tab" href="#job">Job</a></li>
+                                <li class="pb-2"><a class="mx-2" data-toggle="tab" href="#personal">Personal</a></li>
+                                <li class="pb-2"><a class="mx-2" data-toggle="tab" href="#employmentEducation">Employment & Education</a></li>
+                                <li class="pb-2"><a class="mx-2" data-toggle="tab" href="#compensation">Compensation</a></li>
+                                <li class="pb-2"><a class="mx-2" data-toggle="tab" href="#timeoff">Timeoff</a></li>
+                                <li class="pb-2"><a class="mx-2" data-toggle="tab" href="#files">Files</a></li>
+                                <li class="pb-2"><a class="mx-2" data-toggle="tab" href="#privateNotes">Private Notes</a></li>
+                                <li class="pb-2"><a class="mx-2" data-toggle="tab" href="#timeline">Timeline</a></li>
+                            </ul>
+                            
+                            <div class="tab-content">
+                                <div id="job" class="tab-pane fade active show">
+                                  <h3 class="text-center mt-5">Job tab related content here</h3>
+                                </div>
+                                <div id="personal" class="tab-pane fade">
+                                  <h3 class="text-center mt-5">Personal tab related content here</h3>
+                                </div>
+                                <div id="employmentEducation" class="tab-pane fade">
+                                  <h3 class="text-center mt-5">Employment & Education tab related content here</h3>
+                                </div>
+                                <div id="compensation" class="tab-pane fade">
+                                  <h3 class="text-center mt-5">Compensation tab related content here</h3>
+                                </div>
+                                <div id="timeoff" class="tab-pane fade">
+                                    <h3 class="text-center mt-5">Timeoff tab related content here</h3>
+                                </div>
+                                <div id="files" class="tab-pane fade row files-block">
+                                    <div class="col-12 px-4 pt-3 pb-5">
+                                        <h5>Employee Documents <i class="fa fa-lock ml-2 pro-lock-icon" aria-hidden="true"></i></h5>
+                                        <div class="row mb-5">
+                                            <div class="col-6">
+                                                <p class="mb-2">Appointment Letter</p>
+                                                <label class="pro-file-label p-3 w-100">
+                                                    <input type="file" required/>
+                                                    <span><i class="fa fa-paperclip mr-1" aria-hidden="true"></i>Attach File</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="mb-2">Employee Handbook</p>
+                                                <label class="pro-file-label p-3 w-100">
+                                                    <input type="file" required/>
+                                                    <span><i class="fa fa-paperclip mr-1" aria-hidden="true"></i>Attach File</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5>Personal Files <i class="fa fa-lock ml-2 pro-lock-icon" aria-hidden="true"></i></h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="mb-2">Identity Proof</p>
+                                                <label class="pro-file-label p-3 w-100">
+                                                    <input type="file" required/>
+                                                    <span><i class="fa fa-paperclip mr-1" aria-hidden="true"></i>Attach File</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="mb-2">Passport Copy</p>
+                                                <label class="pro-file-label p-3 w-100">
+                                                    <input type="file" required/>
+                                                    <span><i class="fa fa-paperclip mr-1" aria-hidden="true"></i>Attach File</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="privateNotes" class="tab-pane fade">
+                                    <h3 class="text-center mt-5">Private Notes tab related content here</h3>
+                                </div>
+                                <div id="timeline" class="tab-pane fade">
+                                    <h3 class="text-center mt-5">Timeline tab related content here</h3>
+                                </div>
+                              </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-12 p-0 copyright-footer">
+                        <p class="my-2 px-3">
+                            <strong>Copyright &copy 2020.</strong> All rights reserved.
+                        </p>
                     </div>
                 </div>
             </div>

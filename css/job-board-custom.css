@@ -7,10 +7,11 @@
     top: 10px;
     color: orange;
     background-color: #fff;
+    font-weight: 600;
 }
 .proview-image-block {
-    position: absolute;
-    top: 50px;
+    position: relative;
+    top: -60px;
     left: 20px;
     background-color: lightblue;
     color: #fff;
@@ -18,3 +19,32 @@
     width: 100px;
     height: 100px;
 }
+.pro-contact-card {
+    background-color: #fff;
+}
+.pro-tabs {
+    border-bottom: none !important;
+}
+.pro-tabs a {
+    color: #000;
+    text-decoration: none !important;
+}
+.pro-lock-icon {
+    color: orange;
+}
+/* Custom input file start */
+.pro-file-label input[type="file"] {
+    position:absolute;
+    top: -1000px;
+    visibility: hidden;
+}
+.pro-file-label {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: lightskyblue;
+}
+.files-block {
+    background-color: #fff;
+}
+/* Custom input file end */
