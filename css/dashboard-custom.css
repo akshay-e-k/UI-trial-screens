@@ -19,7 +19,6 @@ body {
 }
 .text {
       display: inline;
-      margin: 0;
       font-size: 12px;
       font-weight: 700;
 }
@@ -92,7 +91,7 @@ body {
       top: 0;
       width: 8px;
       height: 12px;
-      border: solid rgba(14, 118, 168, 1);
+      border: solid #0e76a8;
       border-width: 0 3px 3px 0;
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -172,7 +171,7 @@ body {
       display: none !important;
 }
 .k-pager-wrap .k-link {
-      background-color: rgba(0, 154, 255, 1) !important;
+      background-color: #009aff !important;
       height: 20px;
 }
 .k-link .k-pager-nav {
@@ -180,7 +179,7 @@ body {
       right: 0;
 }
 .k-pager-info {
-      background-color: rgba(90, 190, 255, 1);
+      background-color: #5abeff;
       margin: 0 0 0 20px !important;
       color: #fff;
       display: block !important;
@@ -200,18 +199,17 @@ body {
 .todo-container {
       border-top: 2px solid #f39c12;
 }
-.addTodoBtn {
+.addtodo-btn {
       position: relative;
       left: 70px;
-      background-color: rgba(0, 154, 255, 1) !important;
+      background-color: #009aff !important;
       border: none;
       color: #fff;
-      padding: 5px;
       height: 20px;
       top: 4px;
       outline: none !important;
 }
-.addTodoBtn span {
+.addtodo-btn span {
       position: relative;
       bottom: 8px;
 }
@@ -228,9 +226,9 @@ body {
     overflow: hidden;
 }
 .todo-table td {
-      border-left: 2px solid rgba(230, 231, 232, 1) !important;
+      border-left: 2px solid #e6e7e8 !important;
       padding: 0 10px !important;
-      background-color: rgba(244, 244, 244, 1);
+      background-color: #f4f4f4;
       border-bottom: 5px solid #fff !important;
 }
 .job-statuses-container td{
